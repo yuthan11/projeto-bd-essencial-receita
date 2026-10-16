@@ -1,3 +1,9 @@
+CREATE TABLE ingredientes(
+ id_ingrediente SERIAL PRIMARY KEY,
+ nome varchar (100) not null,
+ categoria varchar (50) not null,
+ unidade_medida_padrao varchar (20) not null
+
 CREATE TABLE receita (
   id_receita SERIAL PRIMARY KEY,
   id_autor_chef int,
@@ -15,4 +21,3 @@ create table public.mercado_parceiro (
   unidade_medida_padrao character varying(20) not null,
   constraint mercado_parceiro_pkey primary key (id_mercado)
 ) TABLESPACE pg_default;
-
