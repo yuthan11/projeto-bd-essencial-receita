@@ -46,3 +46,12 @@ create table public.despesa_virtual (
   data_atualizacao timestamp without time zone null,
   constraint despesa_virtual_pkey primary key (id_despesa)
 ) TABLESPACE pg_default;
+
+create table public.estoque (
+  id_estoque serial not null,
+  id_mercado integer not null,
+  id_inrediente integer not null,
+  preco_unitario numeric(10, 2) not null,
+  quantidade_disponivel numeric(10, 2) not null,
+  constraint estoque_pkey primary key (id_estoque)
+) TABLESPACE pg_default;
