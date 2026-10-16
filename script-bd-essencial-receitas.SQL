@@ -36,3 +36,13 @@ CREATE TABLE usuario(
  termo_lgpd_aceito boolean not null,
  data_criacao timestamp
 );
+
+create table public.despesa_virtual (
+  id_despesa serial not null,
+  fk_despesa integer null,
+  fk_ingrediente integer null,
+  quantidade numeric(10, 2) null,
+  unidade_medida character varying(20) null,
+  data_atualizacao timestamp without time zone null,
+  constraint despesa_virtual_pkey primary key (id_despesa)
+) TABLESPACE pg_default;
