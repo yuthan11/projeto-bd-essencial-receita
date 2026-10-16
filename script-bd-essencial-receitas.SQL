@@ -65,3 +65,17 @@ create table public.item_pedido (
   foi_substituido boolean null,
   constraint item_pedido_pkey primary key (id_item_pedido)
 ) TABLESPACE pg_default;
+
+
+CREATE TABLE cupom_desconto(
+ id_cupom SERIAL PRIMARY KEY,
+ id_mercado int,
+ codigo_cupom  varchar(30) not null,
+ percentual_desconto  decimal(5,2),
+ valor_desconto_fixo  decimal(10,2),
+ data_validade   timestamp not null,
+ ativo  boolean
+);
+
+SELECT * FROM cupom_desconto; 
+
